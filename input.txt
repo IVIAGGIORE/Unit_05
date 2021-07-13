@@ -1,0 +1,3 @@
+Minsk;15;passenger;18:00:00;Monday;Sunday
+Vitebs;18;passenger;15:40:00;Sunday
+Minsk;15;passenger;18:30:00;Friday;Sunday
