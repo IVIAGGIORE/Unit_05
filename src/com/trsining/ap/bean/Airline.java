@@ -3,6 +3,7 @@ package com.trsining.ap.bean;
 import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Objects;
 
 public class Airline {
 	private String destination;
@@ -45,6 +46,23 @@ public class Airline {
 	}
 	
 	
+	@Override
+	public int hashCode() {
+		return Objects.hash(destination, numberFlight, timeDeparture, typeAircraft, weekDays);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Airline other = (Airline) obj;
+		return Objects.equals(destination, other.destination) && Objects.equals(numberFlight, other.numberFlight)
+				&& Objects.equals(timeDeparture, other.timeDeparture)
+				&& Objects.equals(typeAircraft, other.typeAircraft) && Objects.equals(weekDays, other.weekDays);
+	}
 	@Override
 	public String toString() {
 		return "Airline [destination=" + destination + ", numberFlight=" + numberFlight + ", typeAircraft="
